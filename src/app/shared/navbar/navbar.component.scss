@@ -3,3 +3,6 @@ $primary : #531587;
 .background-primary{
     background-color: $primary;
 }
+.degradar {
+    background: linear-gradient(-90, red, white) !important;
+}
