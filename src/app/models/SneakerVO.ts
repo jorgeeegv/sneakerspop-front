@@ -3,6 +3,7 @@ export interface SneakerVO {
     nombre: string,
     marca: string,
     stock: number,
-    precio: number
+    precio: number,
+    img : string
 
 }
