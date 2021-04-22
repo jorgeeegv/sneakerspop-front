@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SneakerItemComponent } from './components/sneaker-item/sneaker-item.component';
+import { SneakersRoutingModule } from './sneakers-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { SneakerListComponent } from './components/sneaker-list/sneaker-list.component';
-
+import { SneakerItemComponent } from './components/sneaker-item/sneaker-item.component';
 
 
 @NgModule({
-  declarations: [SneakerItemComponent, SneakerListComponent],
+  declarations: [
+    SneakerListComponent,
+    SneakerItemComponent
+  ],
   imports: [
-    CommonModule
-  ]
+    BrowserModule,
+    CommonModule,
+    SneakersRoutingModule
+  ],
+  exports: [SneakerListComponent]
+
 })
 export class SneakersModule { }

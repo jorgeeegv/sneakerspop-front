@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SneakersServiceService } from './services/sneakers-service.service';
 import { PopupComponent } from './shared/popup/popup.component';
+import { SneakersModule } from './modules/sneakers/sneakers.module';
+import { SneakerListComponent } from './modules/sneakers/components/sneaker-list/sneaker-list.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,12 @@ import { PopupComponent } from './shared/popup/popup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SneakersModule
   ],
   providers: [
     SneakersServiceService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

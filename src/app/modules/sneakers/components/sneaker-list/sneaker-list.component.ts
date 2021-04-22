@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SneakerVO } from 'src/app/models/SneakerVO';
+import { SneakersServiceService } from 'src/app/services/sneakers-service.service';
 
 @Component({
   selector: 'app-sneaker-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SneakerListComponent implements OnInit {
 
-  constructor() { }
+  sneakers: Array<SneakerVO>;
+  title = "SNEAKERS LIST"
+  constructor(private SneakerService:SneakersServiceService) {
+   }
 
   ngOnInit(): void {
+    this.sneakers = this.SneakerService.getSneakers();
+    console.log(this.sneakers);
+
   }
 
 }
