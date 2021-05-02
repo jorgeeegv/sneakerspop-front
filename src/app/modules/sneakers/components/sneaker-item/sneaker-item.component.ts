@@ -13,6 +13,7 @@ export class SneakerItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('hola')
   }
 
 }

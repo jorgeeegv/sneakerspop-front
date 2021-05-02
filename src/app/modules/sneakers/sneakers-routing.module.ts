@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   {
-    path : 'sneakers',
+    path : '',
     component : SneakerListComponent
   }
 ];

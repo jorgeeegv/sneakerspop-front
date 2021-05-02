@@ -1,8 +1,8 @@
 
 <h1 class=" mt-4 text-center">{{ title }}</h1>
 <br />
-<div class="row ml-4 mr-4 d-grid gap-2">
-<div  *ngFor="let sneaker of sneakers">
+<div class="row ml-4 mr-4 ">
+<div *ngFor="let sneaker of sneakers">
     <app-sneaker-item [sneaker]="sneaker"></app-sneaker-item>
 </div>
 </div>

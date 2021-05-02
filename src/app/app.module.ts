@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SneakersServiceService } from './services/sneakers-service.service';
 import { PopupComponent } from './shared/popup/popup.component';
-import { SneakersModule } from './modules/sneakers/sneakers.module';
-import { SneakerListComponent } from './modules/sneakers/components/sneaker-list/sneaker-list.component';
+import { InitArticleComponent } from './shared/init-article/init-article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PopupComponent
+    PopupComponent,
+    InitArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SneakersModule
   ],
   providers: [
     SneakersServiceService
