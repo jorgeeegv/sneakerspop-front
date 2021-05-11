@@ -1,12 +1,40 @@
 .carousel-item{
-    height: 450px;
+    height: auto;
+    width: auto ;
+    align-self: center;
+    margin-left: 20%;
+    margin-right: 25%;
+    border: 1px solid black;
+
     
 } 
 .carousel-item img{
-    height: 450px;
+    height: 100%;
+    width: auto;
 }
 
 .carousel{
-        background-image: linear-gradient(180deg,hsl(210deg 10% 23%)10%,white ) !important;
+         background-image: linear-gradient(360deg,hsl(210deg 10% 23%)10%,white ) !important;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 2%;
 
+}
+ngb-carousel .wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 55%; /* Keep ratio for 900x500 images */
+}
+ngb-carousel .wrapper>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-self: center;
+  
+}
+.title-intro{
+  text-shadow: black 0.1em 0.1em 0.2em;
 }

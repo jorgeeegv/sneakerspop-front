@@ -1,4 +1,24 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+<h1 class="display-4 text-center title-intro">Bienvenidos a SneakerPop!</h1>
+<p class="lead text-center">En SneakerPop podras encontrar informacion acerca de los nuevos sneakers que aparecen en el mercado con
+    sus diferentes opciones de compra, como revenderlos y sacar partido a las zapatillas que ya no usas!</p> </div>
+</div>
+<div class="container-fluid">
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of images">
+            <div class="wrapper">
+                <img [src]="image.src" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{ image.title }}</h3>
+                <p>{{ image.short }}</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+
+</div>
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -6,10 +26,10 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="../../../assets/fondo.jpg" alt="First slide">
+            <img class="d-block w-100 center" src="https://i.ibb.co/6m4FXYH/air-jordan-1-retro-high-who-said-man-was-not-meant-to-fly-1-1000.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="https://i.ibb.co/6m4FXYH/air-jordan-1-retro-high-who-said-man-was-not-meant-to-fly-1-1000.png" alt="Second slide">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="..." alt="Third slide">
@@ -23,16 +43,85 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div> -->
 
 
-<div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
+<div class="jumbotron m-3">
+    <h1 class="display-4 text-center">El inicio de un movimiento</h1>
+    <p class="lead text-center">Historia del HypeBeast y como surgió</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <p>Desde hace muchos años la ropa y los estilos de cada época son temas de conversación en cualquier charla habitual. Tener
+    un estilo para cualquier persona es algo elemental y que con el paso del tiempo se ha ido acentuando más. Pero en el
+    último tiempo se han estado dando importantes colaboraciones multimillonarias de músicos o deportistas con marcas
+    deportivas o hasta en la ropa más excéntrica y llamativa posible. Así son el Streetwear y los Hype Beast, las dos nuevas
+    modas provenientes de EE.UU. que están arrasando en el mundo entero. Pero, ¿qué son exactamente estas dos modas?
+    </p><p>
+    El Streetwear es el resultado de la combinación de ropa urbana y ropa de lujo. Es decir, combinar la comodidad de las
+    prendas deportivas sin dejar de lado el lujo. Así, nos podemos encontrar con buzos o remeras de hasta U$S 250 y ropa de
+    todo tipo que llega a precios realmente exorbitantes. Este estilo ha sido adoptado durante décadas por gente del mundo
+    del Rap y se encarga de trasladarlo a sus fans como Kanye West o Pharrell Williams con las zapatillas de Adidas que
+    adoptan sus nombres. Los Hype Beast contrastan totalmente con los del Streetwear, ya que estas son las personas que no
+    se fijan en una marca porque les gusten sus diseños o porque sean unos apasionados de su historia, sino que solamente
+    compran un artículo porque está de Moda. No les importa lo que ofrecen el resto de marcas, solo van por los productos
+    menos accesibles de las marcas reconocidas y que estén en la boca de todos. En definitiva, van en busca de los productos
+    más buscados.
+    </p><p>
+    Una vez explicadas las diferencias entre estos dos conceptos, que algunas veces son difíciles de distinguir, vamos a
+    explicar la historia del Streetwear. Todo comenzó en 1980 cuando un aficionado al surf impregnado por la cultura de la
+    costa oeste de los EE.UU de la época, llamado Shawn Stussy, decide comenzar a fabricar sus propias tablas de surf con su
+    firma estampada a la vez que hace camisetas para intentar promocionar su marca de tablas. Al ver que las camisetas
+    acaban teniendo un mayor éxito que las tablas decide fabricar más y en 1984 funda junto con su amigo Frank Sinatra (que
+    nada tiene que ver con el cantante) la compañía “Stüssy Inc.”, cuyo estilo encajaba perfectamente con el de la época.
+    Poco a poco la marca se fue expandiendo y cada vez la vestían más DJ´s y estrellas del Rap a medida que su popularidad
+    crecía y sus productos se volvían más anhelados. En este momento se podría decir que nació el Streetwear.
+    </p><p>
+    A medida que pasaban los años iban surgiendo nuevas marcas y colaboraciones de estas con marcas deportivas, que
+    provocaban que firmas como Adidas, Nike o Le Coq aumentaran su popularidad en la calle. Actualmente, en el mercado se
+    encuentran muchas otras marcas, como Off-White, cuyo fundador, Virgil Abloh, se confirmó hace escasos días como nuevo
+    director creativo de Louis Vuitton. También se están marcas como Gucci, Palace, Supreme, Champion, Anti Social Social
+    Club, la ya mencionada Stüssy e incluso marcas como Adidas o Nike se introdujeron en este mundo hace unos años gracias a
+    grandes colaboraciones con algunas de las marcas citadas anteriormente, lo que hacía que creciera su popularidad.
+    </p><p>
+    La estrategia de estas marcas es sencilla: sacan un número de productos muy limitado (incluso a veces se hacen sorteos
+    para tener acceso a la compra de estos productos), y de esta forma provocan que la locura por estos artículos crezca y
+    se conviertan en objetos muy codiciados por los que se pueden llegar a pagar precios exorbitantes. Esto, a su vez, les
+    hace crecer como marca y cada vez van obteniendo más popularidad de forma que sus productos son más demandados y su
+    admiración crece.
+    </p><p>
+    En estos momentos en Internet, se pueden encontrar dichos productos las páginas de compra y venta como E-Bay, siendo de
+    los artículos que más dinero y clics generan. Uno de los ítems más buscados en el último mes han sido unas zapatillas de
+    la colección “The Ten” hecha por Nike y Off-White que pueden llegar hasta los US$ 710.
+    
+    Pirámide Invertida se puso en contacto con un coleccionista de zapatillas, que contó un poco más de lo que es este mundo
+    para él. Esteban Santos tiene 27 años y vive en Caballito, colecciona zapatillas desde los 15 años y ha llegado a tener
+    30 pares dentro de esta colección. “Para mí la vestimenta o look es todo, tu primera impresión con la otra persona.
+    Básicamente es parte de lo que soy, lo que demuestro sobre mi personalidad, tiene mucha importancia en mi vida.”, dice
+    Santos. Sobre cuál es más de su estilo, señaló: “Últimamente me volví mas HypeBeast, porque siempre tengo la intensión
+    de estar a la moda y además me gusta tener algo que el otro no puede conseguir, te da como una sensación de
+    exclusividad.”
+    
+    La realidad económica del país ha llegado a afectar este nuevo mercado, sobre lo cual Esteban analizó: “En el último
+    tiempo cuesta más acceder a ciertas prendas, la suba del dólar nos mata a nosotros. Además las marcas no mandan ciertos
+    productos porque saben que con lo que cuestan no van a vender y terminan perdiendo”. No siempre el que busca encuentra,
+    en este mercado tenés que ser rápido cuando se habla de ediciones limitadas: “A mí lo que más me gustan son las
+    zapatillas, desde que soy chico las colecciono y siempre quiero tener lo último. Las que más me costaron conseguir
+    fueron las Jordan I, una edición que saco Nike para rememorar las primeras zapatillas que usó Michael cuando firmó con
+    la pipa, me costaron en reventa un poco más de 750 dólares”, contó.
+    </p><p>
+    Dentro de internet se puede encontrar de todo: revendedores confiables, páginas que prometen cosas pero luego no cumplen
+    y, como en todo ámbito de Argentina, quien se quiere aprovechar vendiendo productos falsos. “Uno tiene páginas de
+    confianza, al principio iba a los locales y recorria. Pero con internet se volvió todo más fácil, si investigas un poco
+    te das cuenta que es fake (falso) y que OG (original). Además en este círculo te vas haciendo de amigos y siempre te
+    recomiendan alguna que otra página.”, concluyó Santos.
+    </p><p>
+    En Argentina, el streetwear todavía está dando sus primeros pasos para lo que es el público en general, aunque algunos
+    famosos como cantantes, sobre todo de Trap, algunos actores y los jugadores de fútbol se han dejado ver con prendas y
+    looks de este género. Para el común denominador de la gente, acceder a este tipo de prendas resulta utópico por la
+    situación del dólar. El producto que más llama la atención y resulta más accesible para el argentino son las zapatillas
+    y es en las redes sociales donde más se mueven o viraliza qué se está usando. En Instagram podemos encontrar páginas
+    como SneakerHead, CopKickz o Huntr, que se encargan de generar contenido sobre este género y hasta incluso vender
+    ciertos productos que van llegando al país. Así es esta nueva moda que acaba de llegar y está alcanzando unos números
+    increíbles, en cuanto a ventas y seguidores. No se sabe si alcanzará una admiración mayor de la que ya tiene, lo que sí
+    parece seguro es que ha llegado para quedarse.</p>
+    
 </div>

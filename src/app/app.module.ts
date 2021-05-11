@@ -7,6 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SneakersServiceService } from './services/sneakers-service.service';
 import { PopupComponent } from './shared/popup/popup.component';
 import { InitArticleComponent } from './shared/init-article/init-article.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { InitArticleComponent } from './shared/init-article/init-article.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
   ],
   providers: [
     SneakersServiceService
