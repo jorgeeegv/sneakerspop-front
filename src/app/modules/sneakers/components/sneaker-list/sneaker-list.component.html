@@ -1,6 +1,8 @@
 
-<h1 class="display-4 mt-4 text-center">{{ title }}</h1>
+<h1 class="display-4 mt-4 text-center"><b>{{ title }}</b></h1>
 <br />
+<h4 class="m-4">Lista de Sneakers del mes :</h4>
+
 <div class="row ml-4 mr-4 ">
 <div *ngFor="let sneaker of sneakers">
     <app-sneaker-item [sneaker]="sneaker"></app-sneaker-item>

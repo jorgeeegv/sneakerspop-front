@@ -10,7 +10,7 @@ import { SneakersServiceService } from 'src/app/services/sneakers-service.servic
 export class SneakerListComponent implements OnInit {
 
   sneakers: Array<SneakerVO>;
-  title = "SNEAKERS LIST"
+  title = "ULTIMOS LANZAMIENTOS DE SNEAKERS"
   constructor(private SneakerService:SneakersServiceService) {
    }
 

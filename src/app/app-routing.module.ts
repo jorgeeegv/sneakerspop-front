@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { InitArticleComponent } from './shared/init-article/init-article.component';
 
 const routes: Routes = [
@@ -19,6 +20,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./modules/login/login.module').then(b => b.LoginModule)
 
+  },
+  {
+    path :'dashboard',
+    component : DashboardComponent
   }
 ];
 
