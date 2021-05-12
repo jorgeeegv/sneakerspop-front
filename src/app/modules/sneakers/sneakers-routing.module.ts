@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SneakerListComponent } from './components/sneaker-list/sneaker-list.component';
 import { SneakerAddComponent } from './components/sneaker-add/sneaker-add.component';
 import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.component';
-
+import { AuthGuard } from 'src/app/shared/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -12,11 +12,13 @@ const routes: Routes = [
   },
   {
     path : 'new',
-    component : SneakerAddComponent
+    component : SneakerAddComponent,
+    canActivate: [AuthGuard]
   },
   {
     path : ':sneakerId',
-    component : SneakerEditComponent
+    component : SneakerEditComponent,
+    canActivate: [AuthGuard]
   }
 
 ];
