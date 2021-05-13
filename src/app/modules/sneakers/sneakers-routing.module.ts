@@ -13,12 +13,12 @@ const routes: Routes = [
   {
     path : 'new',
     component : SneakerAddComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path : ':sneakerId',
     component : SneakerEditComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   }
 
 ];

@@ -9,15 +9,13 @@ import { InitArticleComponent } from './shared/init-article/init-article.compone
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PopupComponent,
     InitArticleComponent,
-    DashboardComponent,
-  ],
+    DashboardComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

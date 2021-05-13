@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormBuilder,
+  Validators,
+  FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-sneaker-add',
@@ -10,6 +13,11 @@ export class SneakerAddComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form){
+    console.log(form)
+
   }
 
 }
