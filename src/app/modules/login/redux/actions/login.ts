@@ -5,7 +5,7 @@ import { AppState } from "src/app/redux/interfaces/app-state";
 
 @Injectable()
 export class LoginActions {
-  
+  static SET_USER = 'SET_USER';
 
   constructor(
     private redux: NgRedux<AppState>,

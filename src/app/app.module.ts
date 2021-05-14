@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
 import { AppState } from './redux/interfaces/app-state';
-import { IAppState, rootReducer } from './redux/store';
+import { rootReducer } from './redux/store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +34,13 @@ import { IAppState, rootReducer } from './redux/store';
 export class AppModule { 
 
   constructor(private ngRedux: NgRedux<AppState>){
-    ngRedux.configureStore(rootReducer,{"": "holaa"});
-    console.log(JSON.stringify(ngRedux.getState()))
+    const currState = window.sessionStorage.getItem('reduxState') ? JSON.parse(window.sessionStorage.getItem('reduxState')) : {};
+    ngRedux.configureStore(rootReducer,currState);
     window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
+
+    ngRedux.subscribe(()=>{
+      window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()))
+    })
   }
 
 }
