@@ -5,6 +5,7 @@ import { SneakerListComponent } from './components/sneaker-list/sneaker-list.com
 import { SneakerItemComponent } from './components/sneaker-item/sneaker-item.component';
 import { SneakerAddComponent } from './components/sneaker-add/sneaker-add.component';
 import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.component';
+import { SneakerComponent } from './components/sneaker/sneaker.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.com
     SneakerListComponent,
     SneakerItemComponent,
     SneakerAddComponent,
-    SneakerEditComponent
+    SneakerEditComponent,
+    SneakerComponent
   ],
   imports: [
     CommonModule,

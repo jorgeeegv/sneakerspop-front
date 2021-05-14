@@ -4,6 +4,7 @@ import { SneakerListComponent } from './components/sneaker-list/sneaker-list.com
 import { SneakerAddComponent } from './components/sneaker-add/sneaker-add.component';
 import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.component';
 import { AuthGuard } from 'src/app/shared/guards/auth.guard';
+import { SneakerComponent } from './components/sneaker/sneaker.component';
 
 const routes: Routes = [
   {
@@ -16,9 +17,13 @@ const routes: Routes = [
     // canActivate: [AuthGuard]
   },
   {
-    path : ':sneakerId',
+    path : 'edit/:sneakerId',
     component : SneakerEditComponent,
     // canActivate: [AuthGuard]
+  },
+  {
+    path : ':sneakerId',
+    component : SneakerComponent
   }
 
 ];
