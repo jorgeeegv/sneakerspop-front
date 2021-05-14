@@ -9,6 +9,9 @@ import { InitArticleComponent } from './shared/init-article/init-article.compone
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+import { AppState } from './redux/interfaces/app-state';
+import { IAppState, rootReducer } from './redux/store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +23,20 @@ import { DashboardComponent } from './shared/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+   NgReduxModule
   ],
   providers: [
     SneakersServiceService
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(private ngRedux: NgRedux<AppState>){
+    ngRedux.configureStore(rootReducer,{"": "holaa"});
+    console.log(JSON.stringify(ngRedux.getState()))
+    window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
+  }
+
+}
