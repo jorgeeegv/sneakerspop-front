@@ -1,4 +1,4 @@
-<div class="card m-1 bg-dark text-white" routerLink="{{ sneaker.id }}" style="width: 18rem;">
+<!-- <div class="card m-1 bg-dark text-white" routerLink="{{ sneaker.id }}" style="width: 18rem;">
     <img class="card-img-top back-white" src="../../../../../assets/jordan1.png" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title text-center">{{ sneaker.nombre }}</h5>
@@ -7,4 +7,23 @@
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
     </div>
-</div>
+</div> -->
+<mdb-card>
+    <!--Card image-->
+    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+    <!--Card content-->
+    <mdb-card-body>
+  
+      <!--Title-->
+      <mdb-card-title>
+        <h4>Card Title</h4>
+      </mdb-card-title>
+  
+      <!--Text-->
+      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+        content.
+      </mdb-card-text>
+  
+      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+    </mdb-card-body>
+  </mdb-card>

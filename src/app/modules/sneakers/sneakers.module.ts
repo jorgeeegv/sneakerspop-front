@@ -6,6 +6,7 @@ import { SneakerItemComponent } from './components/sneaker-item/sneaker-item.com
 import { SneakerAddComponent } from './components/sneaker-add/sneaker-add.component';
 import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.component';
 import { SneakerComponent } from './components/sneaker/sneaker.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SneakerComponent } from './components/sneaker/sneaker.component';
   ],
   imports: [
     CommonModule,
-    SneakersRoutingModule
+    SneakersRoutingModule,
+    MDBBootstrapModule.forRoot()
   ],
 
 })

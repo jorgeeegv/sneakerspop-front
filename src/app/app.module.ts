@@ -12,6 +12,8 @@ import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
 import { AppState } from './redux/interfaces/app-state';
 import { rootReducer } from './redux/store';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { rootReducer } from './redux/store';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-   NgReduxModule
+   NgReduxModule,
+   BrowserAnimationsModule,
+   MDBBootstrapModule.forRoot()
   ],
   providers: [
     SneakersServiceService
