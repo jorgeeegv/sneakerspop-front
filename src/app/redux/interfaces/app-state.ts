@@ -5,9 +5,9 @@ import { AppStateShops } from "./app-state-shops";
 import { AppStateSneakers } from "./app-state-sneakers";
 
 export interface AppState {
-    login : AppStateLogin,
-    sneakers : AppStateSneakers,
-    brands : AppStateBrands,
-    shops : AppStateShops,
-    raffles : AppStateRaffles
+    // login : AppStateLogin,
+    // sneakers : AppStateSneakers,
+    // brands : AppStateBrands,
+    // shops : AppStateShops,
+    // raffles : AppStateRaffles
 }
