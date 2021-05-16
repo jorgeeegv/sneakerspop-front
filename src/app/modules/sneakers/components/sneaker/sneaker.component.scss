@@ -8,6 +8,7 @@ img{
 .back-white{
     background-color: white ;
 }
-.shadow{
-    box-shadow: 5px 15px 20px #343a40 !important;
+.degradar {
+    // hsl(210deg 10% 23%)!important
+    background-image: linear-gradient(180deg,hsl(210deg 10% 23%)1%,white ) !important;
 }

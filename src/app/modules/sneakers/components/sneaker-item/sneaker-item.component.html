@@ -8,22 +8,43 @@
             content.</p>
     </div>
 </div> -->
-<mdb-card>
-    <!--Card image-->
-    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
-    <!--Card content-->
-    <mdb-card-body>
-  
-      <!--Title-->
-      <mdb-card-title>
-        <h4>Card Title</h4>
-      </mdb-card-title>
-  
-      <!--Text-->
-      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-      </mdb-card-text>
-  
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-    </mdb-card-body>
-  </mdb-card>
+<!--Card-->
+    <!--Card-->
+    <mdb-card cascade="true" class="mt-2" routerLink="{{ sneaker.id }}" style="box-shadow: 0px 10px 10px -6px black;">
+    
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img src="{{ sneaker.img }}"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+    
+      <mdb-card-body cascade="" class="text-center">
+        <!--Card content-->
+        <h4 class="card-title">
+          <strong>{{ sneaker.nombre }}</strong>
+        </h4>
+        <h5>{{ sneaker.marca }}</h5>
+    <strong>
+      <h5><b class="display-6">{{ sneaker.precio }} </b> <i size="lg"class="fas fa-dollar-sign"></i> </h5>
+    </strong>
+        <mdb-card-text>
+        Si tenemos que pensar en zapatillas legendarias, seguro que las Air Jordan 1 son de las primeras que mencionamos
+        </mdb-card-text>
+        <!--Twitter-->
+        <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
+          <mdb-icon fab icon="twitter"></mdb-icon>
+        </a>
+        <!--Google +-->
+        <a type="button" mdbBtn floating="true" size="sm" color="dribbble" class="waves-light" mdbWavesEffect>
+          <mdb-icon fab icon="dribbble"></mdb-icon>
+        </a>
+    
+      </mdb-card-body>
+      <!--/.Card content-->
+    
+    </mdb-card>
+    <!--/.Card-->
+<!--/.Card-->

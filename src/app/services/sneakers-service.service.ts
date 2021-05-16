@@ -17,7 +17,7 @@ export class SneakersServiceService {
         id : 1,
         nombre : "Jordan 1",
         marca : "Nike x Jordan",
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         stock : 13,
         precio : 120
       },
@@ -25,7 +25,7 @@ export class SneakersServiceService {
         id: 2,
         nombre: "Jordan 1",
         marca: "Nike x Jordan",
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         stock: 13,
         precio: 120
       },
@@ -34,7 +34,7 @@ export class SneakersServiceService {
         nombre: "Jordan 1",
         marca: "Nike x Jordan",
         stock: 13,
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         precio: 120
       },
       {
@@ -42,7 +42,7 @@ export class SneakersServiceService {
         nombre: "Jordan 1",
         marca: "Nike x Jordan",
         stock: 13,
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         precio: 120
       },
       {
@@ -50,7 +50,7 @@ export class SneakersServiceService {
         nombre: "Jordan 1",
         marca: "Nike x Jordan",
         stock: 13,
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         precio: 120
       }, 
       {
@@ -58,7 +58,7 @@ export class SneakersServiceService {
         nombre: "Jordan 1",
         marca: "Nike x Jordan",
         stock: 13,
-        img: 'jordan1.png',
+        img: 'https://i.ibb.co/XWFsgFW/air-jordan-1-retro-high-white-university-blue-black-1-1000.png',
         precio: 120
       },
 

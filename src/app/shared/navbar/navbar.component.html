@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark degradar">
+<nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark degradar">
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item mt-1 ml-5 mr-2 mb-2 active">
@@ -22,13 +22,20 @@
         </ul>
     </div>
     <ul class="navbar-nav mr-auto mx-auto">
-    <li class="nav-item mt-1 active">
-        <button  class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="secondary" outline="true" mdbWavesEffect>Contacto</button>
+    <li class="nav-item mr-4 active">
+        <a class="nav-link ">Contacto</a>
     </li>
     </ul>
     <ul class="navbar-nav mr-auto mx-auto">
-        <li class="nav-item mt-1 active">
-            <button class="ml-1 mt-1 mb-3 mr-0" type="button" mdbBtn color="light" mdbWavesEffect routerLink="login">LOGIN  </button>
+        <li class="nav-item mt-1 active" *ngIf="signed!=true">
+            <button class="ml-1 mt-1 mb-3 mr-0" type="button" mdbBtn color="light" mdbWavesEffect routerLink="login" style="border-radius: 25px;">LOGIN </button>
+        </li>´
+        <li class="nav-item mt-1 active" *ngIf="signed">
+            <button type="button" class="ml-1 mt-1 mb-3 mr-0" color="light">Mi cuenta</button>
+
+        </li>
+        <li class="nav-item mt-1 active" *ngIf="signed">
+            <button class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="danger" rounded="true" outline="true" mdbWavesEffect>Log out </button>
         </li>
     </ul>
 </nav>

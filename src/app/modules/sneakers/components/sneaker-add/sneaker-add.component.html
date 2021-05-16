@@ -1,36 +1,51 @@
+<div class="d-flex justify-content-center m-4  " style="margin-bottom: 190px !important;">
+  <mdb-card class="w-75 d-flex align-self-center">
 
-<div class="card border-dark mb-3 m-5">
-    <div class="card-header text-center"><h2><b>NEW SNEAKER</b></h2></div>
-    <div class="m-5">
-        <div class="card-body text-dark">
-            <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Nombre</label>
-                  <input type="text" class="form-control mr-2" name="nombre" id="formGroupExampleInput" placeholder="Jordan 1 ..." required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2" >Marca</label>
-                    <!-- select brands  -->
-                    <input type="text" name="marca" class="form-control" id="formGroupExampleInput2" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Stock</label>
-                    <input type="number" name="stock" class="form-control" id="formGroupExampleInput2" value="1" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Precio</label>
-                    <input type="number" name="precio" class="form-control" id="formGroupExampleInput2" placeholder="Precio € ..." required>
-                  </div>
-                  <!-- <div class="form-group">
-                    <label for="formGroupExampleInput2">Imagen</label>
-                    <input type="file" id="input_img" (input)="onInput($event)" accept="image/*">
-                </div> -->
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-dark">Añadir Sneaker</button>
+    <mdb-card-header class="dark-text text-center py-4">
+      <h5 class="display-4">
+        <strong>Nueva Sneaker</strong>
+      </h5>
+    </mdb-card-header>
 
-                </div>    
-              </form>
-    
+
+    <!--Card content-->
+    <mdb-card-body class="">
+
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;">
+
+        <!-- Email -->
+        <div class="md-form">
+          <input type="email" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <label for="materialLoginFormEmail">Nombre del Sneaker</label>
         </div>
-    </div>
-  </div>
+        <div class="md-form">
+          <input type="email" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <label for="materialLoginFormEmail">Marca</label>
+        </div>
+        <div class="md-form">
+          <input type="number" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <label for="materialLoginFormEmail">Stock</label>
+        </div>
+
+        <!-- Password -->
+        <div class="md-form">
+          <input type="password" id="materialLoginFormPassword" class="form-control" mdbInput>
+          <label for="materialLoginFormPassword">Imagen de referencia</label>
+        </div>
+
+        <!-- Sign in button -->
+        <button mdbBtn type="button" class="btn btn-lg" color="blue-grey" mdbWavesEffect>Registrar Sneaker</button>
+
+
+        <!-- Register -->
+
+        <!-- Social login -->
+      </form>
+      <!-- Form -->
+
+    </mdb-card-body>
+
+  </mdb-card>
+</div>
+<!-- Material form login -->
