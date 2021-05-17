@@ -5,5 +5,5 @@ export interface AppStateRaffles {
         list : RaffleVO[],
         count : number
     },
-    selectedShop: RaffleVO;
+    selectedRaffle: RaffleVO;
 }

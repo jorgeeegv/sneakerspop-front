@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   signed: boolean = false;
   adminAccess : boolean = true;
+
+  nameUser : string ;
   constructor() { }
 
   ngOnInit(): void {

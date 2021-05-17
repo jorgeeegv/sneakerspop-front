@@ -1,4 +1,5 @@
-<table class="table mt-4 mr-2" style="margin-bottom: 320px;">
+<h3 class="display-4 text-center mt-3">Actions</h3>
+<table mdbTable class="table mt-4 mr-2" style="margin-bottom: 10%;">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Tipo</th>
@@ -9,26 +10,41 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Sneaker</th>
+        <th scope="row">SNEAKER</th>
         <td>Acciones para añadir nuevas sneakers</td>
         <td>        <a class="nav-link mx-auto btn btn-warning text-dark" href="http://localhost:4200/sneakers/new" ><b>NUEVA SNEAKER</b></a>
 
       </tr>
       <tr>
-        <th scope="row">Brand</th>
+        <th scope="row">BRAND</th>
         <td>Acciones para añadir nuevas marcas</td>
-        <td>        <a class="nav-link mx-auto btn btn-warning text-dark" ><b>NUEVA MARCA</b></a>
+        <td> <a class="nav-link mx-auto btn btn-warning text-dark" href="http://localhost:4200/brands/new" ><b>NUEVA MARCA</b></a>
         </tr>
       <tr>
-        <th scope="row">Shop</th>
+        <th scope="row">SHOP</th>
         <td>Acciones para añadir nuevas tiendas</td>
         <td>        <a class="nav-link  mx-auto btn btn-warning text-dark" ><b>NUEVA TIENDA</b></a>
         </tr>
       <tr>
-        <th scope="row">Raffles</th>
+        <th scope="row">RAFFLES</th>
         <td>Acciones para añadir nuevos sorteos</td>
-        <td>        <a class="nav-link  mx-auto btn btn-warning text-dark" ><b>NUEVA SORTEO</b></a>
+        <td>        <a class="nav-link  mx-auto btn btn-warning text-dark" ><b>NUEVO SORTEO</b></a>
         </td>
       </tr>
     </tbody>
   </table>
+  <!-- <table mdbTable>
+    <thead class="black white-text">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements">
+        <th scope="row">{{el.id}}</th>
+        <td>{{el.first}}</td>
+        <td>{{el.last}}</td>
+        <td>{{el.handle}}</td>
+      </tr>
+    </tbody>
+  </table> -->

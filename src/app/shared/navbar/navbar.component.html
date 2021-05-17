@@ -15,23 +15,23 @@
             <li class="nav-item mt-1 mr-2 active">
                 <a class="nav-link ">Raffles</a>
             </li>
-            <li class="nav-item mt-1 mr-2 active">
+            <li class="nav-item mt-1 mr-0 active">
                 <a class="nav-link ">Shops</a>
             </li>
             
         </ul>
     </div>
     <ul class="navbar-nav mr-auto mx-auto">
-    <li class="nav-item mr-4 active">
+    <li class="nav-item mr-2 active">
         <a class="nav-link ">Contacto</a>
     </li>
     </ul>
     <ul class="navbar-nav mr-auto mx-auto">
         <li class="nav-item mt-1 active" *ngIf="signed!=true">
             <button class="ml-1 mt-1 mb-3 mr-0" type="button" mdbBtn color="light" mdbWavesEffect routerLink="login" style="border-radius: 25px;">LOGIN </button>
-        </li>´
-        <li class="nav-item mt-1 active" *ngIf="signed">
-            <button type="button" class="ml-1 mt-1 mb-3 mr-0" color="light">Mi cuenta</button>
+        </li>
+        <li class="nav-item mt-1 active mr-auto mx-auto" *ngIf="signed && nameUser!=null">
+            <a class="nav-link ml-1 mt-2 mb-3 mr-0 text-warning">{{ nameUser }}</a>
 
         </li>
         <li class="nav-item mt-1 active" *ngIf="signed">

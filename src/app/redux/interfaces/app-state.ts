@@ -7,7 +7,7 @@ import { AppStateSneakers } from "./app-state-sneakers";
 export interface AppState {
     login : AppStateLogin,
      sneakers : AppStateSneakers,
-    // brands : AppStateBrands,
-    // shops : AppStateShops,
-    // raffles : AppStateRaffles
+     brands : AppStateBrands,
+     shops : AppStateShops,
+     raffles : AppStateRaffles
 }

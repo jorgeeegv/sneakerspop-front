@@ -5,5 +5,5 @@ export interface AppStateBrands {
         list : BrandVO[],
         count : number
     },
-    selectedShop: BrandVO;
+    selectedBrand: BrandVO;
 }

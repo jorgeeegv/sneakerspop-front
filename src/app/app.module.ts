@@ -14,13 +14,15 @@ import { AppState } from './redux/interfaces/app-state';
 import { rootReducer } from './redux/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { RegisterComponent } from './shared/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PopupComponent,
     InitArticleComponent,
-    DashboardComponent  ],
+    DashboardComponent,
+    RegisterComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
