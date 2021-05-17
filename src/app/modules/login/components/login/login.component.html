@@ -1,13 +1,13 @@
 <!-- Default form login -->
-<form class="text-center border border-light p-5 w-50" style="margin-bottom: 10%;margin-left: 25%;">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center border border-light p-5 w-50" style="margin-bottom: 10%;margin-left: 25%;">
 
     <p class="h4 mb-4">Inicio sesion</p>
   
     <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <input type="email"  formControlName="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
   
     <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+    <input type="password"  formControlName="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
   
     <div class="d-flex ml-0">
       <div class="mr-4">
@@ -22,7 +22,7 @@
   
     <!-- Sign in button -->
     <div class="w-50 d-flex" style="margin-left: 20%;">
-        <button mdbBtn color="dark" block="true" class="my-4" type="submit">Sign in</button>
+        <button mdbBtn color="dark" block="true" class="my-4" type="submit">ACCEDER</button>
     </div>  
     <!-- Register -->
     <p>No eres miembro?
