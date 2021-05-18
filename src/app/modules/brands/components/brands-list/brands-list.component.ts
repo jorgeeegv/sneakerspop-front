@@ -1,5 +1,9 @@
+import { select } from '@angular-redux/store';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BrandVO } from 'src/app/models/BrandVO';
+import { AppStateBrands } from 'src/app/redux/interfaces/app-state-brands';
+import { BrandActions } from '../../redux/actions/brand';
 
 @Component({
   selector: 'app-brands-list',
@@ -7,39 +11,16 @@ import { BrandVO } from 'src/app/models/BrandVO';
   styleUrls: ['./brands-list.component.scss']
 })
 export class BrandsListComponent implements OnInit {
+  @select(['brands']) brandList$: Observable<AppStateBrands>;
+
 
   brands : BrandVO[];
-  constructor() { }
+  constructor( private BrandsActions : BrandActions) { }
 
   ngOnInit(): void {
-    this.brands = [
-      {
-        nombre : "Nike",
-        stockTotal : 234,
-        link : "www.nike.es"
-      },
-      {
-        nombre: "Puma",
-        stockTotal: 46,
-        link: "www.puma.es"
-      },
-      {
-        nombre: "Adidas",
-        stockTotal: 100,
-        link: "www.adidas.es"
-      },
-      {
-        nombre: "Gucci",
-        stockTotal: 100,
-        link: "www.gucci.com"
-      },
-      {
-        nombre: "OFF WHITE",
-        stockTotal: 100,
-        link: "www.offwhite.com"
-      },
-    ]
-
+    this.brandList$.subscribe((response)=>{
+      this.brands = response.list.list;
+    })
 
   }
 

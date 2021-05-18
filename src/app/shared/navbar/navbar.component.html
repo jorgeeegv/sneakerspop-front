@@ -1,7 +1,7 @@
 
 <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark degradar">
     <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto" style="margin-left: 29% !important;">
             <li class="nav-item mt-1 ml-5 mr-2 mb-2 active">
                 <a class="nav-link" routerLink="">Home</a>
             </li>
@@ -13,29 +13,33 @@
             </li>
             <a routerLink="sneakers" class="d-none d-lg-block ml-5 mt-1 mb-1 mr-5"><img class="logo" src="../../../assets/logo.png"></a>
             <li class="nav-item mt-1 mr-2 active">
-                <a class="nav-link ">Raffles</a>
+                <a class="nav-link " routerLink="sorteos">Raffles</a>
             </li>
             <li class="nav-item mt-1 mr-0 active">
-                <a class="nav-link ">Shops</a>
+                <a class="nav-link" routerLink="shops">Shops</a>
+            </li>
+            <li class="nav-item mt-1 mr-0 active">
+                <a class="nav-link ">Contacto</a>
             </li>
             
         </ul>
     </div>
     <ul class="navbar-nav mr-auto mx-auto">
-    <li class="nav-item mr-2 active">
-        <a class="nav-link ">Contacto</a>
-    </li>
-    </ul>
-    <ul class="navbar-nav mr-auto mx-auto">
         <li class="nav-item mt-1 active" *ngIf="signed!=true">
-            <button class="ml-1 mt-1 mb-3 mr-0" type="button" mdbBtn color="light" mdbWavesEffect routerLink="login" style="border-radius: 25px;">LOGIN </button>
+            <button class="ml-1 mt-1 mb-3 mr-0 text-dark" type="button" mdbBtn type="button" color="warning" mdbWavesEffect routerLink="login">LOG IN </button>
         </li>
-        <li class="nav-item mt-1 active mr-auto mx-auto" *ngIf="signed && nameUser!=null">
-            <a class="nav-link ml-1 mt-2 mb-3 mr-0 text-warning">{{ nameUser }}</a>
+        <li class="nav-item mt-1 active mr-auto mx-auto d-flex row" *ngIf="signed && nameUser!=null">
+            <button class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="warning" outline="true" mdbWavesEffect
+                mdbPopover="Usuario : {{ nameUser }}" placement="bottom"
+                mdbPopoverHeader="MI PERFIL :">
+                MI CUENTA
+            </button>
 
         </li>
         <li class="nav-item mt-1 active" *ngIf="signed">
-            <button class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="danger" rounded="true" outline="true" mdbWavesEffect>Log out </button>
+                        <a class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="warning" outline="true" mdbWavesEffect *ngIf="adminAccess"
+                            routerLink="dashboard">Admin Panel</a>
+            <button class="ml-1 mt-1 mb-3 mr-0" mdbBtn type="button" color="danger" rounded="true" outline="true" mdbWavesEffect (click)="logout()">Log out </button>
         </li>
     </ul>
 </nav>

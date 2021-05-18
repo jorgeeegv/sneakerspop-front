@@ -15,6 +15,13 @@ import { rootReducer } from './redux/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RegisterComponent } from './shared/register/register.component';
+import { LoginActions } from './modules/login/redux/actions/login';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { sneakersActions } from './modules/sneakers/redux/actions/sneakerActions';
+import { BrandActions } from './modules/brands/redux/actions/brand';
+import { RaffleActions } from './modules/raffles/redux/actions/raffle';
+import { ShopActions } from './modules/shops/redux/actions/shop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,23 +37,49 @@ import { RegisterComponent } from './shared/register/register.component';
     HttpClientModule,
    NgReduxModule,
    BrowserAnimationsModule,
-   MDBBootstrapModule.forRoot()
+   MDBBootstrapModule.forRoot(),
+   ReactiveFormsModule,
+   FormsModule,
+   ToastrModule.forRoot()
+  
   ],
   providers: [
-    SneakersServiceService
+    SneakersServiceService,
+    LoginActions,
+    sneakersActions,
+    BrandActions,
+    RaffleActions,
+    ShopActions
+
   ],
   bootstrap: [AppComponent],
 })
 export class AppModule { 
 
-  constructor(private ngRedux: NgRedux<AppState>){
+  constructor(private ngRedux: NgRedux<AppState>,
+    private LoginActions: LoginActions,
+    private sneakersActions: sneakersActions ,
+    private BrandActions: BrandActions ,
+    private RaffleActions : RaffleActions,
+    private ShopActions : ShopActions
+    ){
+      this.init();
     const currState = window.sessionStorage.getItem('reduxState') ? JSON.parse(window.sessionStorage.getItem('reduxState')) : {};
+    
     ngRedux.configureStore(rootReducer,currState);
-    window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
+    let app = ngRedux.getState()
+    window.sessionStorage.setItem('reduxState', JSON.stringify(app));
 
     ngRedux.subscribe(()=>{
       window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()))
     })
+  }
+
+  init(){
+    this.sneakersActions.listSneakers();
+    this.RaffleActions.findRaffles();
+    this.BrandActions.listBrands();
+
   }
 
 }

@@ -1,5 +1,5 @@
 <!-- Material form register -->
-<mdb-card class="w-50 mt-4" style="margin-left: 25%;margin-bottom: 7.9%;">
+<mdb-card class="w-50 mt-4" style="margin-left: 25%;margin-bottom: 10%;">
 
     <mdb-card-header class="bg-dark white-text text-center py-4">
       <h5>
@@ -11,21 +11,18 @@
     <mdb-card-body class="px-lg-5 pt-0">
   
       <!-- Form -->
-      <form class="text-center" style="color: #757575;">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center" style="color: #757575;">
         <!-- E-mail -->
         <div class="md-form mt-4">
-          <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
+          <input formControlName="email" type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
           <label for="materialRegisterFormEmail">E-mail</label>
         </div>
   
         <!-- Password -->
         <div class="md-form">
-          <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+          <input formControlName="password" type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
             mdbInput>
           <label for="materialRegisterFormPassword">Password</label>
-          <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-            At least 8 characters and 1 digit
-          </small>
         </div>
   
         <!-- Newsletter -->

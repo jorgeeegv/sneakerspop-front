@@ -7,6 +7,10 @@ import { SneakerAddComponent } from './components/sneaker-add/sneaker-add.compon
 import { SneakerEditComponent } from './components/sneaker-edit/sneaker-edit.component';
 import { SneakerComponent } from './components/sneaker/sneaker.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { sneakersActions } from './redux/actions/sneakerActions';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,8 +24,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     CommonModule,
     SneakersRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+        ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
+  providers : [
+    sneakersActions
+  ]
 
 })
 export class SneakersModule { }

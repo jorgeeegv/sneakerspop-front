@@ -14,16 +14,21 @@ const routes: Routes = [
   {
     path : 'new',
     component : SneakerAddComponent,
-    // canActivate: [AuthGuard]
+     canActivate: [AuthGuard]
   },
   {
     path : 'edit/:sneakerId',
     component : SneakerEditComponent,
-    // canActivate: [AuthGuard]
+     canActivate: [AuthGuard]
   },
   {
     path : ':sneakerId',
     component : SneakerComponent
+  },
+    {
+    path: 'home',
+    loadChildren: () => import('./../../shared/init-article/init-article.component').then(b => b.InitArticleComponent)
+
   }
 
 ];

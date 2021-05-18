@@ -1,1 +1,14 @@
-<p>raffles-list works!</p>
+<div class="mt-5 d-flex row-cols-3 flex-wrap" style="margin-bottom: 18%;">
+    <div class="" *ngFor="let raffle of raffles">
+        <mdb-card class="d-flex justify-content-center m-3 bg-warning">
+            <mdb-card-body class="d-flex justify-content-center">
+                <mdb-card-title class="text-center m-2">
+                    <h3 class="display-5">{{ raffle.tienda }}</h3>
+                    <h6 class="mb-2"> Participaciones : <b>{{ raffle.participaciones }} personas</b></h6>
+                    <h6 class="mb-2"> Fecha :<b>{{ date(raffle.fecha) | date: 'd/M/YYYY'}}</b></h6>
+                </mdb-card-title>
+                <a class="w-50 h-50 mt-4" href="{{ raffle.link }}" mdbBtn color="dark">VISITA LA WEB!</a>
+            </mdb-card-body>
+        </mdb-card>
+    </div>
+</div>

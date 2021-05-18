@@ -9,6 +9,9 @@ export const INITIAL_STATE: AppStateSneakers = {
 export const SneakersReducer = (state = INITIAL_STATE, action: any): AppStateSneakers => {
     switch (action.type) {
         case sneakersActions.CREATE_SNEAKER :
+        case sneakersActions.GET_SNEAKERS :
+        case sneakersActions.FIND_SNEAKER :
+      case sneakersActions.CLEAR_SNEAKER :
           return immutableState(state, action.payload);
         default:
           return state;

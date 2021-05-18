@@ -11,6 +11,7 @@ export const INITIAL_STATE: AppStateShops = {
 export const ShopReducer = (state = INITIAL_STATE, action: any): AppStateShops => {
   switch (action.type) {
     case ShopActions.SET_SHOP :
+    case ShopActions.FIND_SHOPS:
       return immutableState(state, action.payload);
     default:
       return state;

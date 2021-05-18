@@ -1,14 +1,14 @@
 <div class="mt-5 d-flex row-cols-3 flex-wrap" style="margin-bottom: 10%;">
     <div class=""  *ngFor="let brand of brands">
-<mdb-card class="d-flex justify-content-center m-3">
+<mdb-card class="d-flex justify-content-center m-3 bg-secondary text-white">
     <mdb-card-body>
         <mdb-card-title class="text-center ">
-            <h5>{{ brand.nombre }}</h5>
-            <h6 class="t mb-2"> Unidades en venta : {{ brand.stockTotal }}</h6>
+            <h5 class="">{{ brand.nombre }}</h5>
+            <h6 class="t mb-2"> Unidades en venta : {{ brand.stock }}</h6>
         </mdb-card-title>
-        <mdb-card-text><p>Entra en la tienda para estar al dia de los ultimos raffles y nuevas sneakers en la tienda,
+        <mdb-card-text class="text-white"><p>Entra en la tienda para estar al dia de los ultimos raffles y nuevas sneakers en la tienda,
             sorteos y mucho mas !</p></mdb-card-text>
-        <a class="" href="{{ brand.link }}" mdbBtn color="primary">Visita la web!</a>
+        <a class="d-flex align-self-center" href="{{ brand.link }}" mdbBtn class="btn-success">Visita la web!</a>
     </mdb-card-body>
 </mdb-card>
     </div>

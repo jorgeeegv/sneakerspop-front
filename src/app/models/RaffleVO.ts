@@ -1,7 +1,7 @@
 export interface RaffleVO {
     id?: number,
     tienda: string,
-    fecha: number,
+    fecha: string,
     participaciones : number,
 
 }

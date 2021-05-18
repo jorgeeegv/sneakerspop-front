@@ -1,6 +1,11 @@
+import { NgRedux, select } from '@angular-redux/store';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { SneakerVO } from 'src/app/models/SneakerVO';
+import { AppStateLogin } from 'src/app/redux/interfaces/app-state-login';
+import { AppStateSneakers } from 'src/app/redux/interfaces/app-state-sneakers';
 import { SneakersServiceService } from 'src/app/services/sneakers-service.service';
+import { sneakersActions } from '../../redux/actions/sneakerActions';
 
 @Component({
   selector: 'app-sneaker-list',
@@ -8,15 +13,21 @@ import { SneakersServiceService } from 'src/app/services/sneakers-service.servic
   styleUrls: ['./sneaker-list.component.scss']
 })
 export class SneakerListComponent implements OnInit {
+  @select(['sneakers']) sneakersList$: Observable<AppStateSneakers>;
 
   sneakers: Array<SneakerVO>;
-  title = "ULTIMOS LANZAMIENTOS DE SNEAKERS"
-  constructor(private SneakerService:SneakersServiceService) {
+  title = "ULTIMOS LANZAMIENTOS DE SNEAKERS";
+  count :number;
+  constructor(private redux : NgRedux<AppStateSneakers>, private SneakerActions : sneakersActions) {
    }
 
   ngOnInit(): void {
-    this.sneakers = this.SneakerService.getSneakers();
-    console.log(this.sneakers);
+    this.SneakerActions.listSneakers();
+    this.sneakersList$.subscribe((response)=>{
+      this.sneakers =response.list.list;
+      this.count = response.list.count;
+    });
+
 
   }
 

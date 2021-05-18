@@ -1,7 +1,7 @@
 export interface BrandVO {
     id?: number,
     nombre: string,
-    stockTotal: number,
+    stock: number,
     link : string
 
 }

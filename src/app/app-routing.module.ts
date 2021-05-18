@@ -12,6 +12,9 @@ const routes: Routes = [
   {
     path : 'sneakers',
     loadChildren: () => import('./modules/sneakers/sneakers.module').then(s => s.SneakersModule)
+  }, {
+    path: 'sorteos',
+    loadChildren: () => import('./modules/raffles/raffles.module').then(s => s.RafflesModule)
   },
   {
     path: 'brands',
@@ -20,6 +23,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./modules/login/login.module').then(b => b.LoginModule)
+
+  },
+  {
+    path: 'shops',
+    loadChildren: () => import('./modules/shops/shops.module').then(b => b.ShopsModule)
 
   },
   {

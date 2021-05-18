@@ -22,7 +22,7 @@
   <mdb-card cascade="true" wider="true" reverse="true" class="my-4 w-75 degradar">
   <!--Card image-->
   <div class="view-cascade overlay waves-light w-50 align-self-center" mdbWavesEffect>
-    <mdb-card-img src="https://i.ibb.co/T4gX50K/air-jordan-1-retro-high-hyper-royal-smoke-grey-1-1000.png"></mdb-card-img>
+    <mdb-card-img src="{{ sneaker.img }}"></mdb-card-img>
     <a>
       <div class="mask rgba-white-slight"></div>
     </a>
@@ -37,10 +37,17 @@
         </h4>
         <h5 class="display-5">{{ sneaker.marca }}</h5>
         <strong>
-          <h5><b class="display-6">{{ sneaker.precio }} </b> <i size="lg" class="fas fa-dollar-sign"></i> </h5>
+          <h5><b class="display-6 text-success">{{ sneaker.precio }} </b> <i size="lg" class="fas fa-dollar-sign text-success"></i> </h5>
         </strong>
-        <mdb-card-text>
-          Si tenemos que pensar en zapatillas legendarias, seguro que las Air Jordan 1 son de las primeras que mencionamos
+        <mdb-card-text class="text-dark " *ngIf="sneaker.marca=='Jordan'">
+          Si tenemos que pensar en zapatillas legendarias, seguro que las Air Jordan son de las primeras que mencionamos ademas
+          la cultura que han creado
+        </mdb-card-text>
+        <mdb-card-text class="text-dark" *ngIf="sneaker.marca=='Adidas'">
+          Sneaker de Adidas, comodo y fiable para poder combinar con los diferentes outfits
+        </mdb-card-text>
+        <mdb-card-text class="text-dark " *ngIf="sneaker.marca=='Nike'">
+          Zapatillas de la famosa marca Nike, zapatillas de muy buena calidad a increibles precios!
         </mdb-card-text>
         <!--Twitter-->
         <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>

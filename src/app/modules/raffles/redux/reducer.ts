@@ -10,6 +10,7 @@ export const INITIAL_STATE: AppStateRaffles = {
 export const RaffleReducer = (state = INITIAL_STATE, action: any): AppStateRaffles => {
   switch (action.type) {
     case RaffleActions.SET_RAFFLE :
+    case  RaffleActions.FIND_RAFFLES :
       return immutableState(state, action.payload);
     default:
       return state;

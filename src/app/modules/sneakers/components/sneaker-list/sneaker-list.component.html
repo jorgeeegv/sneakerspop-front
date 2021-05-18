@@ -1,13 +1,7 @@
-<!-- 
-<h1 class="display-4 mt-4 text-center"><b>{{ title }}</b></h1>
-<br />
-<h4 class="m-4">Lista de Sneakers del mes :</h4>
 
-<div class="row ml-4 mr-4 ">
-<div class="card-deck"*ngFor="let sneaker of sneakers">
-    <app-sneaker-item [sneaker]="sneaker"></app-sneaker-item>
-</div>
-</div> -->
+<h2 class="display-5 mt-4 text-center"><b>{{ title }}</b></h2>
+<h4 class="m-4 text-center">Este mes hay {{ count }} unidades! </h4>
+
 <div class="card-deck w-100 mt-4 mb-2 ml-0">
 <div class="w-25" *ngFor="let sneaker of sneakers">
     <app-sneaker-item [sneaker]="sneaker"></app-sneaker-item>

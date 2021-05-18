@@ -10,6 +10,7 @@ export const INITIAL_STATE: AppStateBrands = {
 export const BrandReducer = (state = INITIAL_STATE, action: any): AppStateBrands => {
   switch (action.type) {
     case BrandActions.BRAND_NEW :
+    case BrandActions.LIST_BRANDS :
       return immutableState(state, action.payload);
     default:
       return state;

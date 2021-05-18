@@ -5,12 +5,14 @@ import { immutableState } from 'src/app/shared/utils';
 export const INITIAL_STATE: AppStateLogin = {
   logged : false,
   email : null,
-  token : null
+  token : null,
+  admin : null
 };
 
 export const LoginReducer = (state = INITIAL_STATE, action: any): AppStateLogin => {
   switch (action.type) {
     case LoginActions.SET_USER :
+    case LoginActions.CLEAR_USER:
       return immutableState(state, action.payload);
     default:
       return state;

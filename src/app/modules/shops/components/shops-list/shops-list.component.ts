@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShopVO } from 'src/app/models/ShopVO';
 
 @Component({
   selector: 'app-shops-list',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopsListComponent implements OnInit {
 
+  shops : ShopVO [];
   constructor() { }
 
   ngOnInit(): void {

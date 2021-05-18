@@ -2,7 +2,7 @@
   <mdb-card class="w-75 d-flex align-self-center">
 
     <mdb-card-header class="dark-text text-center py-4">
-      <h5 class="display-4">
+      <h5>
         <strong>Nueva Sneaker</strong>
       </h5>
     </mdb-card-header>
@@ -12,28 +12,34 @@
     <mdb-card-body class="">
 
       <!-- Form -->
-      <form class="text-center" style="color: #757575;">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center" style="color: #757575;">
 
         <!-- Email -->
         <div class="md-form">
-          <input type="email" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <input type="text" formControlName="nombre" id="materialLoginFormEmail" class="form-control" mdbInput>
           <label for="materialLoginFormEmail">Nombre del Sneaker</label>
         </div>
         <div class="md-form">
-          <input type="email" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <input type="text" formControlName="marca" id="materialLoginFormEmail" class="form-control" mdbInput>
           <label for="materialLoginFormEmail">Marca</label>
         </div>
         <div class="md-form">
-          <input type="number" id="materialLoginFormEmail" class="form-control"  value="1" mdbInput>
+          <input type="number" formControlName="stock" id="materialLoginFormEmail" class="form-control" mdbInput>
           <label for="materialLoginFormEmail">Stock</label>
         </div>
         <div class="md-form">
-          <input type="password" id="materialLoginFormEmail" class="form-control" mdbInput>
-          <label for="materialLoginFormEmail">Imagen de referencia</label>
+          <input type="number" formControlName="precio" id="materialLoginFormEmail" class="form-control" mdbInput>
+          <label for="materialLoginFormEmail">Precio</label>
+        </div>
+        <div class="md-form">
+              <!-- <input type="file" (input)="onInput($event)" class="form-control-file" id="exampleFormControlFile1"> -->
+
+          <input type="file" (input)="onInput($event)" id="" class="form-control" mdbInput>
+          <!-- <label for="materialLoginFormEmail">Imagen de referencia</label> -->
         </div>
 
         <!-- Sign in button -->
-        <button mdbBtn type="button" class="btn btn-lg" color="dark" mdbWavesEffect>Registrar Sneaker</button>
+        <button mdbBtn type="button" [disabled]="urlImage==null" class="btn btn-lg" color="dark" type="submit" mdbWavesEffect>Registrar!</button>
 
 
         <!-- Register -->

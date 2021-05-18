@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center border border-light p-5" style="margin-bottom: 17% !important;">
+
+    <p class="h4 mb-4">CREAR SORTEO</p>
+
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <select formControlName="tienda" class="browser-default custom-select">
+                <option value="{{shop.nombre}}" *ngFor="let shop of shops"><b>{{ shop.nombre }}</b> ( {{ shop.ubicacion }} )</option>
+                
+            </select>
+        </div>
+    </div>
+    <input type="date" formControlName="fecha" id="" class="form-control mb-4" placeholder="Fecha">
+    <!-- Sign up button -->
+    <button mdbBtn color="dark" block="true" class="my-4" type="submit">Añadir Raffle</button>
+
+</form>
+<!-- Default form register -->

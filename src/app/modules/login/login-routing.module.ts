@@ -10,6 +10,10 @@ const routes: Routes = [
   },{
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'sneakers',
+    loadChildren: () => import('./../sneakers/sneakers.module').then(s => s.SneakersModule)
   }
 ];
 
