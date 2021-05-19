@@ -22,7 +22,7 @@ export class RaffleActions {
 
   findRaffles(){
     this.http.get(enviroment.apiEndPoint + "/raffles").subscribe((response: Array<RaffleVO>) => {
-      if (response) {
+      if (response && response!=null) {
         this.redux.dispatch({
           type: RaffleActions.FIND_RAFFLES,
           payload: {
@@ -41,7 +41,6 @@ export class RaffleActions {
   }
 
   createRaffle(raffle: RaffleVO) {
-    console.log(raffle);
     let token = this.redux.getState().login.token;
     this.http.post(enviroment.apiEndPoint + "/raffle", raffle, { headers: { "authorization": token } }).subscribe((response: RaffleVO) => {
       if (response) {

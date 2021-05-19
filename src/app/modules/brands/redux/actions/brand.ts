@@ -21,7 +21,7 @@ export class BrandActions {
     
   listBrands() {
     this.http.get(enviroment.apiEndPoint + "/brands").subscribe((response: Array<BrandVO>) => {
-      if (response) {
+      if (response && response != null) {
         this.redux.dispatch({
           type: BrandActions.LIST_BRANDS,
           payload: {

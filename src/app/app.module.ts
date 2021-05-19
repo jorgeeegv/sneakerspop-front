@@ -64,19 +64,18 @@ export class AppModule {
     private ShopActions : ShopActions
     ){
       this.init();
-    const currState = window.sessionStorage.getItem('reduxState') ? JSON.parse(window.sessionStorage.getItem('reduxState')) : {};
+    const currState = window.localStorage.getItem('reduxState') ? JSON.parse(window.localStorage.getItem('reduxState')) : {};
     
     ngRedux.configureStore(rootReducer,currState);
-    let app = ngRedux.getState()
-    window.sessionStorage.setItem('reduxState', JSON.stringify(app));
+    window.localStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
 
     ngRedux.subscribe(()=>{
-      window.localStorage.setItem('reduxState', JSON.stringify(app));
+      window.localStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
     })
   }
 
   init(){
-    this.sneakersActions.listSneakers();
+    // this.sneakersActions.listSneakers();
     this.RaffleActions.findRaffles();
     this.BrandActions.listBrands();
 

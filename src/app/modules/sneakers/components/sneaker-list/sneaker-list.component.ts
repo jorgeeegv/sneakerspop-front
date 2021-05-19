@@ -22,7 +22,8 @@ export class SneakerListComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.SneakerActions.listSneakers();
+    this.SneakerActions.clearSneaker();
+     this.SneakerActions.listSneakers();
     this.sneakersList$.subscribe((response)=>{
       this.sneakers =response.list.list;
       this.count = response.list.count;

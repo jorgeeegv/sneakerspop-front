@@ -27,7 +27,7 @@ export class sneakersActions {
   createSneaker(sneaker: SneakerVO) {
     let token = this.redux.getState().login.token;
     this.http.post(enviroment.apiEndPoint + "/sneaker", sneaker, { headers: { "authorization" : token }}).subscribe((response : SneakerVO)=>{
-      if (response) {
+      if (response && response != null) {
         console.log(response)
         this.redux.dispatch({
           type: sneakersActions.CREATE_SNEAKER,
@@ -46,7 +46,7 @@ export class sneakersActions {
   }
   listSneakers() {
       this.http.get(enviroment.apiEndPoint + "/sneakers").subscribe((response: Array<SneakerVO>) => {
-        if (response) {
+        if (response && response != null) {
           this.redux.dispatch({
             type: sneakersActions.GET_SNEAKERS,
             payload: {
@@ -67,7 +67,7 @@ export class sneakersActions {
 
   findSneaker(id:number) {
       this.http.get(enviroment.apiEndPoint + "/sneaker/" + id).subscribe((response: SneakerVO) => {
-        if (response) {
+        if (response && response != null) {
           this.redux.dispatch({
             type: sneakersActions.FIND_SNEAKER,
             payload: {
@@ -86,6 +86,16 @@ export class sneakersActions {
     const formData = new FormData();
     formData.append('image',imagen);
     return this.http.post(enviroment.apiImagebb, formData, { params: { key: enviroment.keyImagebb}}).pipe(map((response)=> response['data']['url']))
+  }
+
+  clearSneaker(){
+    this.redux.dispatch({
+      type: sneakersActions.FIND_SNEAKER,
+      payload: {
+        selectedSneaker: null
+
+      }
+    })
   }
 
 }
