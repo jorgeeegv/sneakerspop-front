@@ -40,12 +40,11 @@ import { RegisterComponent } from './shared/register/register.component';
 export class AppModule { 
 
   constructor(private ngRedux: NgRedux<AppState>){
-    const currState = window.sessionStorage.getItem('reduxState') ? JSON.parse(window.sessionStorage.getItem('reduxState')) : {};
+    const currState = window.localStorage.getItem('reduxState') ? JSON.parse(window.sessionStorage.getItem('reduxState')) : {};
     ngRedux.configureStore(rootReducer,currState);
-    window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()));
-
+        let app = ngRedux.getState();
     ngRedux.subscribe(()=>{
-      window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()))
+      window.localStorage.setItem('reduxState', JSON.stringify(app));
     })
   }
 
