@@ -71,7 +71,7 @@ export class AppModule {
     window.sessionStorage.setItem('reduxState', JSON.stringify(app));
 
     ngRedux.subscribe(()=>{
-      window.sessionStorage.setItem('reduxState', JSON.stringify(ngRedux.getState()))
+      window.localStorage.setItem('reduxState', JSON.stringify(app));
     })
   }
 
