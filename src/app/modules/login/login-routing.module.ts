@@ -14,6 +14,11 @@ const routes: Routes = [
   {
     path: 'sneakers',
     loadChildren: () => import('./../sneakers/sneakers.module').then(s => s.SneakersModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./../../app-routing.module').then(s => s.AppRoutingModule)
+
   }
 ];
 

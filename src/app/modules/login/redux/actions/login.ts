@@ -41,7 +41,7 @@ export class LoginActions {
             admin : rol
           }
         })
-         this.router.navigate(['sneakers']);
+         this.router.navigate(['home']);
 
        }
        );
