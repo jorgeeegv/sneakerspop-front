@@ -1,14 +1,58 @@
-<div class="mt-5 d-flex row-cols-3 flex-wrap" style="margin-bottom: 18%;">
+<div class="mt-5 d-flex row-cols-3 flex-wrap" style="margin-bottom: 13%;">
     <div class="" *ngFor="let raffle of raffles">
         <mdb-card class="d-flex justify-content-center m-3 bg-warning">
             <mdb-card-body class="d-flex justify-content-center">
                 <mdb-card-title class="text-center m-2">
                     <h3 class="display-5">{{ raffle.tienda }}</h3>
-                    <h6 class="mb-2"> Participaciones : <b>{{ raffle.participaciones }} personas</b></h6>
-                    <h6 class="mb-2"> Fecha :<b>{{ date(raffle.fecha) | date: 'd/M/YYYY'}}</b></h6>
+                    <h6 class="mb-2 w-100"> Participaciones : <b>{{ raffle.participaciones }} personas</b></h6>
+                    <h6 class="mb-2"> Fecha : <b>{{ date(raffle.fecha) | date: 'd/M/YYYY'}}</b></h6>
                 </mdb-card-title>
-                <a class="w-50 h-50 mt-4" href="{{ raffle.link }}" mdbBtn color="dark">VISITA LA WEB!</a>
+                <div class="d-flex lg-col-2">
+                    <a class="w-100 h-50 mt-4 d-flex justify-content-center" href="{{ raffle.link }}" mdbBtn
+                        color="dark">VISITA LA WEB!</a>
+                    <a class="w-100 h-50 mt-4 d-flex justify-content-center" data-toggle="modal"
+                        data-target="#basicExample" (click)="frame.show()" mdbWavesEffect mdbBtn color="info">APUNTARSE
+                        AL SORTEO</a>
+                </div>
             </mdb-card-body>
         </mdb-card>
+        <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading lead">Quieres apuntarte al sorteo de {{ raffle.tienda }} </p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            (click)="frame.hide()">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <mdb-icon fas icon="check" size="4x" class="mb-3 animated rotateIn"></mdb-icon>
+                            <h3 class="display-5">{{ raffle.tienda }}</h3>
+                            <h6 class="mb-2"> Participaciones : <b>{{ raffle.participaciones }} personas</b></h6>
+                            <h6 class="mb-2"> Fecha : <b>{{ date(raffle.fecha) | date: 'd/M/YYYY'}}</b></h6>
+
+                        </div>
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <a type="button" mdbBtn color="info" class="waves-effect" (click)="apuntarse(raffle) && frame.hide()"
+                            mdbWavesEffect>Apuntarme!!
+                        </a>
+                        <a type="button" mdbBtn color="info" outline="true" class="waves-effect" mdbWavesEffect
+                            (click)="frame.hide()">Volver</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
     </div>
 </div>

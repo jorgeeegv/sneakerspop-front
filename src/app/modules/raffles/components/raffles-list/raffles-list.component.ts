@@ -30,5 +30,11 @@ export class RafflesListComponent implements OnInit {
   date(fecha: string){
     return new Date (fecha);
   }
+  apuntarse(raffle: RaffleVO){
+    console.log(raffle);
+    raffle.participaciones+=1;
+    console.log(raffle)
+    this.RafflesActions.updateRaffle(raffle);
+    }
 
 }

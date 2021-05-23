@@ -12,6 +12,8 @@ export class RaffleActions {
   static SET_RAFFLE = 'SET_RAFFLE';
   static FIND_RAFFLES = 'FIND_RAFFLES';
   static CREATE_RAFFLE = 'CREATE_RAFFLE';
+  static UPDATE_RAFFLE = 'UPDATE_RAFFLE';
+
 
   constructor(
     private redux: NgRedux<AppState>,
@@ -40,6 +42,8 @@ export class RaffleActions {
     })
   }
 
+
+
   createRaffle(raffle: RaffleVO) {
     let token = this.redux.getState().login.token;
     this.http.post(enviroment.apiEndPoint + "/raffle", raffle, { headers: { "authorization": token } }).subscribe((response: RaffleVO) => {
@@ -60,5 +64,31 @@ export class RaffleActions {
     });
   }
 
+
+  updateRaffle(raffle: RaffleVO) {
+    console.log(raffle);
+    let token = this.redux.getState().login.token;
+    if (token !== null) {
+      this.http.post(enviroment.apiEndPoint + "/raffle/"+raffle.id, raffle, { headers: { "authorization": token } }).subscribe((response: RaffleVO) => {
+      if (response) {
+        this.redux.dispatch({
+          type: RaffleActions.UPDATE_RAFFLE,
+          payload: {
+            selectedRaffle: response[0]
+
+          }
+        })
+        this.router.navigate(['sorteos'])
+        this.toaster.success('Tes has apuntado al sorteo correctamente !!', 'Te informaremos mas adelante');
+
+      } else {
+        this.router.navigate(['home'])
+      }
+    });
+    } else {
+      this.toaster.info('Informacion', 'Debes iniciar sesion antes para poder apuntarte al sorteo!');
+      
+    }
+  }
 
 }

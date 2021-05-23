@@ -11,6 +11,9 @@ export const RaffleReducer = (state = INITIAL_STATE, action: any): AppStateRaffl
   switch (action.type) {
     case RaffleActions.SET_RAFFLE :
     case  RaffleActions.FIND_RAFFLES :
+    case RaffleActions.CREATE_RAFFLE:
+    case RaffleActions.UPDATE_RAFFLE:
+
       return immutableState(state, action.payload);
     default:
       return state;
